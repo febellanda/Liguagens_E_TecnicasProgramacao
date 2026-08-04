@@ -1,5 +1,3 @@
-// Programa que calcula a área de um triângulo retângulo
-
 #include <stdio.h>
 #include <stdlib.h>
 
