@@ -1,1 +1,1 @@
-# Linguagens e Técnicas de Programação
+<img widht="100%" src="https://capsule-render.vercel.app/api?type=waving&height=250&color=gradient&text=Linguagens%20&textBg=false&desc=E%20Técnicas%20de%20Programação&descAlignY=55&fontAlignY=33&descSize=30"/>
