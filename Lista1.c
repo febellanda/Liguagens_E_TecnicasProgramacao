@@ -106,7 +106,27 @@ int main(int argc, char *argv[]) {
     media = (val1 + val2 + val3 + val4) / 4;
     produto = val1 * val2 * val3 * val4;
 
-    printf("\nSoma = %.2f\nMédia = %.2f\nProduto = %.2f", soma, media, produto);
+    printf("\nSoma = %.2f\nMédia = %.2f\nProduto = %.2f\n", soma, media, produto);
 
+// Programa lê uma idade em dias e retorna a mesma em anos e meses
+
+    printf("\n- EXERCÍCIO 6 -");
+
+    int idade_dias, meses, anos, dias;
+    printf("Insira sua idade em dias: ");
+    scanf("%d", &idade_dias);
+
+    anos = idade_dias / 365;
+    meses = (idade_dias % 365) / 30;
+    dias = (idade_dias % 365) % 30;
+
+    printf("Você tem %d anos, %d meses e %d dias\n", anos, meses, dias);
+
+// Programa calcula o volume de uma esfera
+
+    printf("\n- EXERCÍCIO 7 -\n\n");
+
+    
     return 0;
 }
+
