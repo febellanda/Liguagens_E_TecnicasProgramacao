@@ -2,7 +2,9 @@
 int main(int argc, char *argv[]){
     int selecao;
     do {
-        printf("\n--- MENU ---\n\n");
+    //  Menu para seleção de um exercício da lista
+
+        printf("\n--- LISTA 1 ---\n\n");
         printf("Ex. 1 ----- 1\n");
         printf("Ex. 2 ----- 2\n");
         printf("Ex. 3 ----- 3\n");
@@ -17,7 +19,8 @@ int main(int argc, char *argv[]){
         printf("\n");
 
         switch(selecao){
-            case 1:
+            case 1: // Programa pede dois valores e printa eles ao contrário usando uma váriavel auxiliar
+                
                 printf("- EXERCÍCIO 1 -\n\n");
         
                 int num1, num2, aux; 
@@ -34,7 +37,22 @@ int main(int argc, char *argv[]){
 
                 printf("%d, %d\n", num1, num2);
                 break;
-        }
+            
+            case 2: // Programa pede um número ao usuário e o retorna em notação científica
+                
+                printf("\n- EXERCÍCIO 2 -\n\n");
+    
+                double notacao;
+                int exp;
+
+                printf("Insira um valor para ser transformado em notação científica: ");
+                scanf("%lf", &notacao);
+
+                while(notacao > 10){
+                    notacao = notacao / 10;
+                    exp++;
+                }
+        }   
     } while(selecao != 0);
     
 
