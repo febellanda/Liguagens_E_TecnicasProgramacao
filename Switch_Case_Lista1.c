@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(int argc, char *argv[]){
     int selecao;
@@ -148,7 +149,41 @@ int main(int argc, char *argv[]){
 
                 printf("Você tem %d anos, %d meses e %d dias\n", anos, meses, dias);
                 break;
-        }   
+            
+            case 7: // Programa calcula o volume de uma esfera
+
+                printf("\n- EXERCÍCIO 7 -\n\n");
+
+                float raio, pi, volume_esfera;
+                pi = 3.14159;
+                printf("Insira o raio para o cálculo do volume da esfera: ");
+                scanf("%f", &raio);
+
+                volume_esfera = (4.0/3) * pi * pow(raio, 3);
+                printf("Volume = %.2f\n", volume_esfera);
+                break;
+
+            case 8: // Programa aplica distância euclidiana com os pontos escolhidos pelo usuário 
+                
+                printf("\n- EXERCÍCIO 8-\n\n");
+
+                int x1, y1, x2, y2, quad1, quad2;
+                float dist_euclid;
+
+                printf("Insira os pontos da primeira coordenada: ");
+                scanf("%d %d", &x1, &y1);
+
+                printf("Insira os pontos da segunda coordenada: ");
+                scanf("%d %d", &x2, &y2);
+
+                quad1 = x2 - x1;
+                quad2 = y2 - y1;
+
+                dist_euclid = sqrt(pow(quad1, 2) + pow(quad2, 2));
+                printf("Distância euclidiana = %.2f\n", dist_euclid);      
+                break;
+
+                }   
     } while(selecao != 0);
 
     printf("Até logo!");
