@@ -53,9 +53,63 @@ int main(int argc, char *argv[]){
                     notacao = notacao / 10;
                     exp++;
                 }
+                printf("Notação científica: %.2lfx10^%d\n", notacao, exp);
+        
+            case 3: // Programa lê um número positivo ate 64 e retorna o mesmo em binário
+                
+                printf("\n- EXERCÍCIO 3 -\n\n");
+    
+                int bit1, bit2, bit3, bit4, bit5, bit6, bit7, num;
+
+                printf("Insira um número positivo até 64 para conversão binária: ");
+                scanf("%d", &num);
+
+                bit7 = num% 2;
+                num = num/2;
+                
+                bit6 = num% 2;
+                num = num/2;
+                
+                bit5 = num% 2;
+                num = num/ 2; 
+                
+                bit4 = num% 2;
+                num = num / 2; 
+
+                bit3 = num % 2;
+                num = num / 2; 
+
+                bit2 = num % 2;
+                num = num / 2; 
+
+                bit1 = num % 2;
+                num = num / 2; 
+
+                printf("Número em binário: %d%d%d%d%d%d%d\n", bit1, bit2, bit3, bit4, bit5, bit6, bit7);
+
+            case 4: // Programa calcula o salário total com a comissão de um vendedor
+                
+                printf("\n- EXERCÍCIO 4 -\n\n");
+    
+                float salario_fixo, total_vendas, comissao, valor_em_comissao, salario_mes;
+                comissao = 0.15;
+                
+                printf("Insira o salário fixo: ");
+                scanf("%f", &salario_fixo);
+
+                printf("Insira o valor total em vendas no mês: ");
+                scanf("%f", &total_vendas);
+
+                valor_em_comissao = comissao * total_vendas;
+                salario_mes = valor_em_comissao + salario_fixo;
+                printf("Esse mês seu salário é de %.2f\n", salario_mes);
         }   
     } while(selecao != 0);
+
+    printf("Até logo!");
     
 
+   return 0;
+}
    return 0;
 }
