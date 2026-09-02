@@ -18,7 +18,10 @@ int main(int argc, char *argv[]){
         printf("Escolha um exercício da lista 1: ");
         scanf("%d", &selecao);
         printf("\n");
-
+        
+        if(selecao > 8) {
+            printf("Seleção inválida!\n");
+        }
         switch(selecao){
             case 1: // Programa pede dois valores e printa eles ao contrário usando uma váriavel auxiliar
                 
@@ -54,7 +57,8 @@ int main(int argc, char *argv[]){
                     exp++;
                 }
                 printf("Notação científica: %.2lfx10^%d\n", notacao, exp);
-        
+                break;
+
             case 3: // Programa lê um número positivo ate 64 e retorna o mesmo em binário
                 
                 printf("\n- EXERCÍCIO 3 -\n\n");
@@ -86,6 +90,7 @@ int main(int argc, char *argv[]){
                 num = num / 2; 
 
                 printf("Número em binário: %d%d%d%d%d%d%d\n", bit1, bit2, bit3, bit4, bit5, bit6, bit7);
+                break;
 
             case 4: // Programa calcula o salário total com a comissão de um vendedor
                 
@@ -103,13 +108,51 @@ int main(int argc, char *argv[]){
                 valor_em_comissao = comissao * total_vendas;
                 salario_mes = valor_em_comissao + salario_fixo;
                 printf("Esse mês seu salário é de %.2f\n", salario_mes);
+                break;
+
+            case 5: // Programa pede 4 valores ao usuário e mostra algumas opeações com os valores
+
+                printf("\n- EXERCÍCIO 5 -\n\n");
+    
+                float val1, val2, val3, val4, soma, media, produto;
+                printf("Valor 1: ");
+                scanf("%f", &val1);
+
+                printf("Valor 2: ");
+                scanf("%f", &val2);
+
+                printf("Valor 3: ");
+                scanf("%f", &val3);
+
+                printf("Valor 4: ");
+                scanf("%f", &val4);
+
+                soma = val1 + val2 + val3 + val4;
+                media = (val1 + val2 + val3 + val4) / 4;
+                produto = val1 * val2 * val3 * val4;
+
+                printf("\nSoma = %.2f\nMédia = %.2f\nProduto = %.2f\n", soma, media, produto);
+                break;
+
+            case 6: // Programa lê uma idade em dias e retorna a mesma em anos e meses
+
+                printf("\n- EXERCÍCIO 6 -");
+
+                int idade_dias, meses, anos, dias;
+                printf("Insira sua idade em dias: ");
+                scanf("%d", &idade_dias);
+
+                anos = idade_dias / 365;
+                meses = (idade_dias % 365) / 30;
+                dias = (idade_dias % 365) % 30;
+
+                printf("Você tem %d anos, %d meses e %d dias\n", anos, meses, dias);
+                break;
         }   
     } while(selecao != 0);
 
     printf("Até logo!");
     
 
-   return 0;
-}
    return 0;
 }
