@@ -1,6 +1,75 @@
 #include <stdio.h>
 #include <math.h>
 
+// Função do EX 1
+void ex1() {
+    printf("\n- EXERCÍCIO 1 -\n\n");
+    
+    int num1, num2, aux;
+
+    printf("Insira um número: ");
+    scanf("%d", &num1);
+
+    printf("Insira outro número: ");
+    scanf("%d", &num2);
+
+    aux = num1;
+    num1 = num2;
+    num2 = aux;
+
+    printf("%d, %d\n", num1, num2);
+}
+
+// Função do EX 2
+void ex2(){
+    printf("\n- EXERCÍCIO 2 -\n\n");
+    
+    double notacao;
+    int exp = 0;
+
+    printf("Insira um valor para ser transformado em notação científica: ");
+    scanf("%lf", &notacao);
+    
+    while(notacao > 10){
+        notacao = notacao / 10;
+        exp++;
+    }
+    printf("Notação científica: %.2lfx10^%d\n", notacao, exp);
+}
+
+// Função do EX 3
+void ex3(){
+    printf("\n- EXERCÍCIO 3 -\n\n");
+    
+    int bit1, bit2, bit3, bit4, bit5, bit6, bit7, num;
+
+    printf("Insira um número positivo até 64 para conversão binária: ");
+    scanf("%d", &num);
+
+    bit7 = num% 2;
+    num = num/2;
+    
+    bit6 = num% 2;
+    num = num/2;
+                
+    bit5 = num% 2;
+    num = num/ 2; 
+                
+    bit4 = num% 2;
+    num = num / 2; 
+
+    bit3 = num % 2;
+    num = num / 2; 
+
+    bit2 = num % 2;
+    num = num / 2; 
+
+    bit1 = num % 2;
+    num = num / 2; 
+
+    printf("Número em binário: %d%d%d%d%d%d%d\n", bit1, bit2, bit3, bit4, bit5, bit6, bit7);
+}
+
 int main(int argc, char *argv[]){
     int selecao;
     do {
@@ -25,72 +94,15 @@ int main(int argc, char *argv[]){
         }
         switch(selecao){
             case 1: // Programa pede dois valores e printa eles ao contrário usando uma váriavel auxiliar
-                
-                printf("- EXERCÍCIO 1 -\n\n");
-        
-                int num1, num2, aux; 
-        
-                printf("Insira um número: ");
-                scanf("%d", &num1);
-
-                printf("Insira outro número: ");
-                scanf("%d", &num2);
-
-                aux = num1;
-                num1 = num2;
-                num2 = aux;
-
-                printf("%d, %d\n", num1, num2);
+                ex1();
                 break;
             
             case 2: // Programa pede um número ao usuário e o retorna em notação científica
-                
-                printf("\n- EXERCÍCIO 2 -\n\n");
-    
-                double notacao;
-                int exp;
-
-                printf("Insira um valor para ser transformado em notação científica: ");
-                scanf("%lf", &notacao);
-
-                while(notacao > 10){
-                    notacao = notacao / 10;
-                    exp++;
-                }
-                printf("Notação científica: %.2lfx10^%d\n", notacao, exp);
+                ex2();
                 break;
 
             case 3: // Programa lê um número positivo ate 64 e retorna o mesmo em binário
-                
-                printf("\n- EXERCÍCIO 3 -\n\n");
-    
-                int bit1, bit2, bit3, bit4, bit5, bit6, bit7, num;
-
-                printf("Insira um número positivo até 64 para conversão binária: ");
-                scanf("%d", &num);
-
-                bit7 = num% 2;
-                num = num/2;
-                
-                bit6 = num% 2;
-                num = num/2;
-                
-                bit5 = num% 2;
-                num = num/ 2; 
-                
-                bit4 = num% 2;
-                num = num / 2; 
-
-                bit3 = num % 2;
-                num = num / 2; 
-
-                bit2 = num % 2;
-                num = num / 2; 
-
-                bit1 = num % 2;
-                num = num / 2; 
-
-                printf("Número em binário: %d%d%d%d%d%d%d\n", bit1, bit2, bit3, bit4, bit5, bit6, bit7);
+                ex3();
                 break;
 
             case 4: // Programa calcula o salário total com a comissão de um vendedor
