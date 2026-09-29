@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int soma(int a, int b){
+	return a + b;
+}
+
+int main(int argc, char *argv[]) {
+	int a, b;
+	printf("Digite dois numeros: ");
+	scanf("%d %d", &a, &b);
+	
+	printf("%d", soma(a,b));
+	return 0;
+}
