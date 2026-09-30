@@ -70,6 +70,77 @@ void ex3(){
     printf("Número em binário: %d%d%d%d%d%d%d\n", bit1, bit2, bit3, bit4, bit5, bit6, bit7);
 }
 
+// Função do EX 4
+void ex4(){
+    printf("\n- EXERCÍCIO 4 -\n\n");
+    
+    float salario_fixo, total_vendas, comissao, valor_em_comissao, salario_mes;
+    comissao = 0.15;
+                
+    printf("Insira o salário fixo: ");
+    scanf("%f", &salario_fixo);
+
+    printf("Insira o valor total em vendas no mês: ");
+    scanf("%f", &total_vendas);
+
+    valor_em_comissao = comissao * total_vendas;
+    salario_mes = valor_em_comissao + salario_fixo;
+    printf("Esse mês seu salário é de %.2f\n", salario_mes);
+}
+
+// Função do EX 5
+void ex5(){
+    printf("\n- EXERCÍCIO 5 -\n\n");
+    
+    float val1, val2, val3, val4, soma, media, produto;
+    printf("Valor 1: ");
+    scanf("%f", &val1);
+
+    printf("Valor 2: ");
+    scanf("%f", &val2);
+
+    printf("Valor 3: ");
+    scanf("%f", &val3);
+
+    printf("Valor 4: ");
+    scanf("%f", &val4);
+
+    soma = val1 + val2 + val3 + val4;
+    media = (val1 + val2 + val3 + val4) / 4;
+    produto = val1 * val2 * val3 * val4;
+
+    printf("\nSoma = %.2f\nMédia = %.2f\nProduto = %.2f\n", soma, media, produto);
+}
+
+// Função do EX 6
+void ex6(){
+    printf("\n- EXERCÍCIO 6 -");
+
+    int idade_dias, meses, anos, dias;
+    printf("Insira sua idade em dias: ");
+    scanf("%d", &idade_dias);
+
+    anos = idade_dias / 365;
+    meses = (idade_dias % 365) / 30;
+    dias = (idade_dias % 365) % 30;
+
+    printf("Você tem %d anos, %d meses e %d dias\n", anos, meses, dias);
+}
+
+// Função do EX 7
+void ex7(){
+    printf("\n- EXERCÍCIO 7 -\n\n");
+
+    float raio, pi, volume_esfera;
+    pi = 3.14159;
+    
+    printf("Insira o raio para o cálculo do volume da esfera: ");
+    scanf("%f", &raio
+    
+    volume_esfera = (4.0/3) * pi * pow(raio, 3);
+    printf("Volume = %.2f\n", volume_esfera);
+}
+
 int main(int argc, char *argv[]){
     int selecao;
     do {
@@ -106,73 +177,19 @@ int main(int argc, char *argv[]){
                 break;
 
             case 4: // Programa calcula o salário total com a comissão de um vendedor
-                
-                printf("\n- EXERCÍCIO 4 -\n\n");
-    
-                float salario_fixo, total_vendas, comissao, valor_em_comissao, salario_mes;
-                comissao = 0.15;
-                
-                printf("Insira o salário fixo: ");
-                scanf("%f", &salario_fixo);
-
-                printf("Insira o valor total em vendas no mês: ");
-                scanf("%f", &total_vendas);
-
-                valor_em_comissao = comissao * total_vendas;
-                salario_mes = valor_em_comissao + salario_fixo;
-                printf("Esse mês seu salário é de %.2f\n", salario_mes);
+                ex4();
                 break;
 
             case 5: // Programa pede 4 valores ao usuário e mostra algumas opeações com os valores
-
-                printf("\n- EXERCÍCIO 5 -\n\n");
-    
-                float val1, val2, val3, val4, soma, media, produto;
-                printf("Valor 1: ");
-                scanf("%f", &val1);
-
-                printf("Valor 2: ");
-                scanf("%f", &val2);
-
-                printf("Valor 3: ");
-                scanf("%f", &val3);
-
-                printf("Valor 4: ");
-                scanf("%f", &val4);
-
-                soma = val1 + val2 + val3 + val4;
-                media = (val1 + val2 + val3 + val4) / 4;
-                produto = val1 * val2 * val3 * val4;
-
-                printf("\nSoma = %.2f\nMédia = %.2f\nProduto = %.2f\n", soma, media, produto);
+                ex5();
                 break;
 
             case 6: // Programa lê uma idade em dias e retorna a mesma em anos e meses
-
-                printf("\n- EXERCÍCIO 6 -");
-
-                int idade_dias, meses, anos, dias;
-                printf("Insira sua idade em dias: ");
-                scanf("%d", &idade_dias);
-
-                anos = idade_dias / 365;
-                meses = (idade_dias % 365) / 30;
-                dias = (idade_dias % 365) % 30;
-
-                printf("Você tem %d anos, %d meses e %d dias\n", anos, meses, dias);
+                ex6();
                 break;
             
             case 7: // Programa calcula o volume de uma esfera
-
-                printf("\n- EXERCÍCIO 7 -\n\n");
-
-                float raio, pi, volume_esfera;
-                pi = 3.14159;
-                printf("Insira o raio para o cálculo do volume da esfera: ");
-                scanf("%f", &raio);
-
-                volume_esfera = (4.0/3) * pi * pow(raio, 3);
-                printf("Volume = %.2f\n", volume_esfera);
+                ex7();
                 break;
 
             case 8: // Programa aplica distância euclidiana com os pontos escolhidos pelo usuário 
