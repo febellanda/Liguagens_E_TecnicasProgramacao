@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// programa que le 10 numeros e retorna o maior numero entra os 5 primeiros e o menor numero entre os 5 restantes
+
 int compararMaior(int a, int b){
 	if(a < b) return b;
 	else return a;
