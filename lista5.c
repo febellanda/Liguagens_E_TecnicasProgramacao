@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 void ex1(){
-	//array indice inicia na posição 0
+	// array indice inicia na posição 0
 	// vetor
 	
 	// recebe um numero base
-	int i, n[10], maior;
+	int i, j, n[10], maior;
 		
 	// laco para escrever 100 numeros a partir do numero base
 	// entrada de dados 
@@ -22,18 +22,19 @@ void ex1(){
 	
 	printf("\n\n");
 	
-	// printa os numeors em ordem decrescente
+	// printa os numeros em ordem decrescente
 	for(i=0; i<10; i++){
-		for(i=0; i<10; i++){
+		for(j=0; j<10; j++){
 		
-			if(n[i] < n[i+1]){
-				maior = n[i+1];
-				n[i+1] = n[i];
-				n[i] = maior;
+			if(n[j] < n[j+1]){
+				maior = n[j+1];
+				n[j+1] = n[j];
+				n[j] = maior;
 			}
 		}
 	}
-	for(i=0; i<10; i++){
+	
+    for(i=0; i<10; i++){
 		printf("numero %d: %d ", i+1, n[i]);
 	}
 }
